@@ -32,7 +32,6 @@ const projects = [
     id: 2,
     title: 'Superstore Dataset',
     description: 'Análise de dados de e-commerce usando python, pandas e matplotlib',
-    technologies: ['Python'],
     details: `Objetivo
 Identificar padrões de vendas, lucro e comportamento do cliente usando EDA e estatística com Python para orientar decisões estratégicas da Superstore.
 
@@ -58,7 +57,6 @@ Conclusões
     id: 3,
     title: 'Catálogo de Livros',
     description: 'Análise de dados de um catálogo de dados feito inteiramente em Power BI',
-    technologies: ['Power BI'],
     details: `Objetivo
 Desenvolver habilidades práticas de análise de um catálogo de dados e criar um dashboard interativo com Power BI que apoie curadoria, marketing e parcerias editoriais.
 Desafios
@@ -96,7 +94,6 @@ Conclusões
     id: 6,
     title: 'Data Lake AWS',
     description: 'Criação de um Data Lake para armazenar dados do TMB e visualização via Quicksight',
-    technologies: ['Python', 'Amazon S3', 'AWS Lambda', 'AWS Glue', 'Amazon Athena', 'Quicksight', 'Docker'],
     details: `Objetivo
 Criei um Data Lake na AWS para armazenar e analisar dados de filmes de terror da API TMDB, usando camadas (Raw, Trusted, Refined) no Amazon S3. 
 Usei AWS Glue, Athena para transformar, modelar (star schema) e QuickSight para visualizar os dados, gerando insights sobre subgêneros e tendências.
@@ -174,17 +171,7 @@ export default function ProjectsSection() {
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                 <p className="text-gray-300 mb-2">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 bg-white/10 rounded-full text-white text-sm font-semibold"
-                      title={tech}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                
                 <div className="flex gap-4">
                   <a
                     href={project.link}
